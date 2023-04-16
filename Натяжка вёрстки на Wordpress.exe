@@ -12,11 +12,43 @@
 
 6. Скинуть  шаблон в WP по пути wp-content/themes
 
-7. Из рукописного сайта  заменить  в шаблоне Js,css,ph,img  папки. В Index.php заменить на свой код HTML.Header и Footer  код поместить в файлы Footer.php, header.php. Подключив в файле index.php  файлы header,footer кодом php <?Php get_footer();?> и <?Php get_header();?>
+7. Создать папку assets поместить папки Js,css,ph,img со стилями и скриптами  туда в assets. Создать файл home.php переместиьь из Index.php код в home.php. Кроме кода heder  и footer , создать Footer.php, header.php, поместить код шапки сайта и подвала по этим файлам . Подключив в файле index.php  файлы header,footer кодом php <?Php get_footer();?> и <?Php get_header();?>. В завершении в index.php должен остатся только функции подключения header and footer.
 
-8.В профеле WP  зайти в настройки - Чтение поставвить галочку статическую страницу и ниже выбрать пример страницы и сохранить. 
+8.В файле Home.php  в самом начале прописать php код дать  файлу название  шаблона 
 
-9. Кодом Php  подключить пути  css,js,ph,img,  при помощи кода  который нужно вводить в указаный путь. <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.css">, после этого вводить  где у вас главный заголовок сайта и подзаголовок <h1><?php bloginfo('name');?></h1>, <p><?php bloginfo('description');?></p>
+<?php
+/*
+Template Name: Home
+*/
+?>
+  
+В профеле WP  зайти в настройки -пункт Чтение и поставвить галочку статическую страницу и ниже выбрать  home пример страницы и сохранить. И  файл home.php будет главной страницей. Нужно указывать шаблон при помощи кода php в самом начале новой созданой страницы , что бы  можно было менять контент через псевдо поля через админку сайта.
+
+9. Создать файл functions.php   подключить css стили ,js скрипты  при помощи кода:
+
+<?php 
+add_action( 'wp_enqueue_scripts' , function(){;
+
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.min.css' ); // подключает стили
+    wp_enqueue_style( 'fonts-gstatic', 'https://fonts.gstatic.com'); // подключает шрифты с сайта google fonts
+    wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css2?family=Pacifico&display=swap','https://fonts.googleapis.com/css2?family=Bad+Script&display=swap'); //подключает конкретные шрифты 
+
+
+	
+	wp_deregister_script('jquery'); // подключает библеотеку jquery внутрению в WP 
+	wp_register_script('jquery','https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'); // подключает библеотеку jquery к сайту
+	wp_enqueue_script('jquery'); // подключает библеотеку jquery к сайту
+
+	wp_enqueue_script( 'script', get_template_directory_uri() .'/assets/js/script.min.js', array('jquery'), 'null', true ); // подключает скрипт , пишем любое навзвание в ('Script',
+});
+
+add_theme_support('post-thumbnails'); // добавляет описание к посту шаблону через  настройки страницы через админку wp
+add_theme_support('title-tag'); // разрешает добавить заголовок через  настройки страницы через админку wp
+add_theme_support('custom-logo'); // разрешает добавить логотип через  настройки страницы через админку wp
+
+?>
+
+Второй вариант подключеия стилей  и всего остального  для себя . <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.css">, после этого вводить  где у вас главный заголовок сайта и подзаголовок <h1><?php bloginfo('name');?></h1>, <p><?php bloginfo('description');?></p>
 
 после этого можно в настройках Wordpress, поменять Главный заголовок и подзаголовок.
 
