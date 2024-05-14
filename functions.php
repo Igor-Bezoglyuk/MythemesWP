@@ -1,4 +1,7 @@
 <?php 
+define('Myurl', get_template_directory_uri());//прописывает верный путь для изображений , которые подключены в файле html через тег img, define('Пишеш что угодно по смыслу на англиском', 
+define('My_derectory', Myurl . '/assets/img');//константа для изображений, которую нужно прописать в каждом теге <img src=" рhp? echo My_derectory ? /icon.jpg, ковычки стрелки не написал так как жалуется на создание php ситаксиса в кеоментариях. Также это действует и на  fav иконку, Такой способ нужен если вы не собираетесь адаптировать контент под заказщика а просто натянуть вёрстку.
+
 add_action( 'wp_enqueue_scripts' , function(){;
     // Пишите  после wp_enqueue_style в  ('MyStyle', ) всё что угодно это название для понимания  так же со скриптами
     wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' ); //Подключает стили css файлы 
