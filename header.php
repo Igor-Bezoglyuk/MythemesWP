@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html <? language_attributes(); /*Подключает язык из админки WP*/?>>
 <head>
-   <meta charset="<? bloginfo('charset') ?>">
+   <meta charset="<? bloginfo('charset') /*Подключает языковой метод из нашей базы данных*/ ?>">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Stylist Anna Lekhmus</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-   <link  rel="shortcut icon" type="image/png" href="<? bloginfo('template_url') ?>/assets/img/Icon-site-style.png">
-   <?php wp_head(); ?>
+   <link  rel="shortcut icon" type="image/png" href="<? bloginfo('template_url') /*Помогает WP искать истеный путь к файлу,подключая его.Метод-2*/?>/assets/img/Icon-site-style.png">
+   <?php wp_head();  /*Подключает админ панель над сайтом */?>
 </head>
 <body>
 
@@ -15,7 +15,7 @@
       <div class="container ps-0 pe-0">
          <div class="Header-top-block row justify-content-between align-items-center text-center">
             <div class="Header-top-blocks col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4">
-               <a class="Header-top-phone" href="tel:<? the_field('Phone_number_Tel'); ?>"><? the_field('phone-number'); ?></a>
+               <a class="Header-top-phone" href="tel:<? the_field('Phone_number_Tel'); ?>"><? the_field('phone-number'); /*Подключает поле созданое в плагине ACF*/?></a>
             </div>
 
             <div class="Header-top-blocks-row col-3">
