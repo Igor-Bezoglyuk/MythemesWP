@@ -88,73 +88,73 @@ Template Name: Home
 
               <div class="Gallery-blocks col-3">
                  <div class="Galllery-blocks-img G-img-1">
-                  <img class="Gallery-img-1" src="img/photo_5190773697739343956_y.jpg" alt="Gallery_img">
+                  <img class="Gallery-img-1" src=" <? the_field('Gallary_block_img_1'); ?>" alt="Gallery_img">
                  </div>
               </div>
 
               <div class="Gallery-blocks col-3">
                <div class="Galllery-blocks-img G-img-2">
-                <img class="Gallery-img-2" src="img/photo_5190773697739343957_y.jpg" alt="Gallery_img">
+                <img class="Gallery-img-2" src="<? the_field('Gallary_block_img_2'); ?>" alt="Gallery_img">
                </div>
             </div>
 
             <div class="Gallery-blocks col-3">
                <div class="Galllery-blocks-img G-img-3">
-                <img class="Gallery-img-3" src="img/photo_5190773697739343958_y.jpg" alt="Gallery_img">
+                <img class="Gallery-img-3" src="<? the_field('Gallary_block_img_3'); ?>" alt="Gallery_img">
                </div>
             </div>
 
             <div class="Gallery-blocks col-3">
                <div class="Galllery-blocks-img G-img-4">
-                <img class="Gallery-img-4" src="img/photo_5190773697739343959_y.jpg" alt="Gallery_img">
+                <img class="Gallery-img-4" src="<? the_field('Gallary_block_img_4'); ?>" alt="Gallery_img">
                </div>
             </div>
 
             <div class="Gallery-blocks col-3">
              <div class="Galllery-blocks-img G-img-5">
-              <img class="Gallery-img-5" src="img/photo_5190773697739343963_y.jpg" alt="Gallery_img">
+              <img class="Gallery-img-5" src="<? the_field('Gallary_block_img_5'); ?>" alt="Gallery_img">
              </div>
           </div>
 
           <div class="Gallery-blocks col-3">
              <div class="Galllery-blocks-img G-img-6">
-              <img class="Gallery-img-6" src="img/photo_5190773697739343974_y.jpg" alt="Gallery_img">
+              <img class="Gallery-img-6" src="<? the_field('Gallary_block_img_6'); ?>" alt="Gallery_img">
              </div>
           </div>
 
           <div class="Gallery-blocks col-3">
             <div class="Galllery-blocks-img G-img-7">
-             <img class="Gallery-img-7" src="img/photo_5190773697739343960_y.jpg" alt="Gallery_img">
+             <img class="Gallery-img-7" src="<? the_field('Gallary_block_img_7'); ?>" alt="Gallery_img">
             </div>
          </div>
 
          <div class="Gallery-blocks col-3">
           <div class="Galllery-blocks-img G-img-8">
-           <img class="Gallery-img-8" src="img/photo_5190773697739343972_y.jpg" alt="Gallery_img">
+           <img class="Gallery-img-8" src="<? the_field('Gallary_block_img_8'); ?>" alt="Gallery_img">
           </div>
        </div>
 
        <div class="Gallery-blocks col-3">
           <div class="Galllery-blocks-img G-img-9">
-           <img class="Gallery-img-9" src="img/photo_5190773697739343964_y.jpg" alt="Gallery_img">
+           <img class="Gallery-img-9" src="<? the_field('Gallary_block_img_9'); ?>" alt="Gallery_img">
           </div>
        </div>
 
        <div class="Gallery-blocks col-3">
          <div class="Galllery-blocks-img G-img-10">
-          <img class="Gallery-img-10" src="img/photo_5190773697739343965_y.jpg" alt="Gallery_img">
+          <img class="Gallery-img-10" src="<? the_field('Gallary_block_img_10'); ?>" alt="Gallery_img">
          </div>
       </div>
 
       <div class="Gallery-blocks col-3">
        <div class="Galllery-blocks-img G-img-11">
-        <img class="Gallery-img-11" src="img/photo_5190773697739343981_y.jpg" alt="Gallery_img">
+        <img class="Gallery-img-11" src="<? the_field('Gallary_block_img_11'); ?>" alt="Gallery_img">
        </div>
     </div>
 
     <div class="Gallery-blocks col-3">
        <div class="Galllery-blocks-img G-img-12">
-        <img class="Gallery-img-12" src="img/photo_5190773697739343961_y.jpg" alt="Gallery_img">
+        <img class="Gallery-img-12" src="<? the_field('Gallary_block_img_12'); ?>" alt="Gallery_img">
        </div>
     </div>
          </div>
@@ -171,31 +171,31 @@ Template Name: Home
 
       <div class="Gallery-link-block row pt-4 pb-4">
           <div class="Gallery-blocks-link">
-              <a class="Gallery-link" href="https://instagram.com/your_stylist_foralloccasions?igshid=YmMyMTA2M2Y="><button class="Gallery-btn btn"><img class="Gallery-img-link-white" src="img/Gallery-link-icon-white.png" alt="gallery_link_icon"> Подробнее..</button></a>
+              <a class="Gallery-link" href="https://instagram.com/your_stylist_foralloccasions?igshid=YmMyMTA2M2Y="><button class="Gallery-btn btn"><img class="Gallery-img-link-white" src="<? the_field('Gallery-img-link-white-button'); ?>" alt="gallery_link_icon"><? the_field('gallery-button-text'); ?></button></a>
           </div>
       </div>
    </section>
 
    <section id="Prise">
        <div class="container-fluid pt-5 pb-5">
-          <h3 class="Prise-title">Прайс</h3>
+          <h3 class="Prise-title"><? the_field('prise-title'); ?></h3>
          <div class="Prise-block row justify-content-center flex-wrap pt-5 pb-5">
 
             <div class="Prise-blocks col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-sm-8">
                <ul class="Prise-blocks-list">
-                   <li class="Prise-li-1">Разбор гардероба (офлайн)<span class="Prise-serves">3 500 ₽ /час</span></li>
-                   <li class="Prise-li-1">Разбор гардероба (онлайн)<span class="Prise-serves">2 500 ₽ /час</span></li>
-                   <li class="Prise-li-2">Сбор капсул<span class="Prise-serves">5 500 ₽</span></li>
-                   <li class="Prise-li-3">Консультация <span class="Prise-serves">2 000 ₽ /час</span></li>
-                   <li class="Prise-li-4">Шопинг (онлайн) <span class="Prise-serves">15 000 ₽</span></li>
-                   <li class="Prise-li-5">Шопинг (офлайн) <span class="Prise-serves">3 500 ₽ <i>/час</i></span></li>
-                   <li class="Prise-li-6">Style Book <span class="Prise-serves">25 000 ₽</span></li>
+                   <li class="Prise-li-1"><? the_field('serveses_text_1'); ?><span class="Prise-serves"><? the_field('prise_1'); ?></span></li>
+                   <li class="Prise-li-1"><? the_field('Serveses_Text_2'); ?><span class="Prise-serves"><? the_field('Prise_2'); ?></span></li>
+                   <li class="Prise-li-2"><? the_field('Serveses_Text_3'); ?><span class="Prise-serves"><? the_field('Prise_3'); ?></span></li>
+                   <li class="Prise-li-3"><? the_field('Serveses_Text_4'); ?><span class="Prise-serves"><? the_field('Prise_4'); ?></span></li>
+                   <li class="Prise-li-4"><? the_field('Serveses_Text_5'); ?> <span class="Prise-serves"><? the_field('Prise_5'); ?></span></li>
+                   <li class="Prise-li-5"><? the_field('Serveses_Text_6'); ?><span class="Prise-serves"><? the_field('Prise_6'); ?> <i></i></span></li>
+                   <li class="Prise-li-6"><? the_field('Serveses_Text_7'); ?><span class="Prise-serves"><? the_field('Prise_7'); ?></span></li>
                </ul>
             </div>
 
             <div class="Prise-blocks p-0 col-xxl-4 col-xl-5 col-lg-6 col-md-7 col-sm-8" style="background: #ffebd5; border-radius:15px">
                <div class="Prise-blocks-img">
-                  <img src="img/photo_5193210185441723243_y.jpg" alt="About_img"> 
+                  <img src="<? the_field('prise_block_image'); ?>" alt="About_img"> 
                </div>
             </div>
 
@@ -330,4 +330,4 @@ Template Name: Home
         </div>
    </section>
    
-   <? get_footer();*Подключает подвал, файл fotter.php*/?>
+   <? get_footer();/*Подключает подвал, файл fotter.php*/?>
