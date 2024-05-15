@@ -15,7 +15,8 @@
       <div class="container ps-0 pe-0">
          <div class="Header-top-block row justify-content-between align-items-center text-center">
             <div class="Header-top-blocks col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4">
-               <a class="Header-top-phone" href="tel:<? the_field('Phone_number_Tel'); ?>"><? the_field('phone-number'); /*Подключает поле созданое в плагине ACF*/?></a>
+               <a class="Header-top-phone" href="tel:<? the_field('Phone_number_Tel'); ?>"><? the_field('phone-number',26); /*Подключает поле созданое в плагине ACF, цифра это ID записи,страницы, которые  можно найти в адресной строке.
+                Чтобы в адресной строке найти ID, нужно зайти в Настройки/Постояные ссылки/ галочка на Простые, узнать id  после слова равно"post=26" только так можно  подключать записи и посты и нетолько, то что не подключенно к шаблону страницы*/?></a>
             </div>
 
             <div class="Header-top-blocks-row col-3">
